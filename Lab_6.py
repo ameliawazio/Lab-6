@@ -43,6 +43,7 @@ if __name__ == '__main__':
         if user_input == 2:# Decoding, partner work
             # enter decode here
             password = decode(stored_password)
+            print(f'The encoded password is {stored_password}, and the original password is {password}')
         if user_input == 3:
             exit()
 

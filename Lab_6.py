@@ -1,7 +1,7 @@
 #Amelia Wazio
 
 # Encoding method
-def encoding(password):
+def encode(password):
     enc_string = ''
     for num in password: # Has to be string to iterate, change to integer after
         num = int(num)
@@ -16,7 +16,7 @@ def encoding(password):
             enc_string += enc_num
     return enc_string
 # Decoding method, for partner
-def decoding(password):
+def decode(password):
 
 
 program = True
@@ -29,7 +29,7 @@ if __name__ == '__main__':
 
         if user_input == 1:
             password = input('Please enter your password to encode: ')
-            encoding(password)
+            encode(password)
             print('Your password has been encoded and stored!')
         if user_input == 2:# Decoding, partner work
             pass

@@ -33,6 +33,7 @@ if __name__ == '__main__':
             print('Your password has been encoded and stored!')
         if user_input == 2:# Decoding, partner work
             pass
+            # enter decode here
         if user_input == 3:
             exit()
 

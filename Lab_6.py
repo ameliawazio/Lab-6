@@ -2,7 +2,6 @@
 
 # Encoding method
 def encode(password):
-    print("papuga")
     enc_string = ''
     for num in password: # Has to be string to iterate, change to integer after
         num = int(num)

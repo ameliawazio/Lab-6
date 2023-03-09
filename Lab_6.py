@@ -18,32 +18,41 @@ def encode(password):
 # Decoding method, for partner
 def decode(password):
     
-    return_password = ''
+    char_string = ''
     for char in password:
-        temp_num = int(char)
-        temp_num = temp_num + 10 if temp_num <= 3 else temp_num
-        return_password += str(temp_num - 3)
+        char = int(char)
+        password = int(password)
+        if char >= 3:
+            dec_char = (char - 3)
+            dec_char = str(dec_char)
+            char_string += dec_char
+        else:
+            dec_char = ((char + 10)-3)
+            dec_char = str(dec_char)
+            char_string += dec_char
     
-    return return_password
+    return char_string
 
 program = True
 # Printing menu and options
 if __name__ == '__main__':
 
-    stored_password = ''
+    
 
     while program == True: # Loop of menu until exit
-        print('Menu\n-------------\n 1. Encode\n 2. Decode\n3. Quit ')
+        print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit ')
         user_input = int(input('Please enter an option: '))
-
+        
         if user_input == 1:
             password = input('Please enter your password to encode: ')
+            encode(password)
             stored_password = encode(password)
             print('Your password has been encoded and stored!')
         if user_input == 2:# Decoding, partner work
             # enter decode here
-            password = decode(stored_password)
-            print(f'The encoded password is {stored_password}, and the original password is {password}')
+            decode(password)
+            char_string = decode(stored_password)
+            print(f'The encoded password is {stored_password}, and the original password is {char_string}')
         if user_input == 3:
             exit()
 
